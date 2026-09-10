@@ -609,7 +609,6 @@ function App() {
 
       {/* Footer */}
       <footer className="max-w-7xl mx-auto px-6 mt-20 border-t border-slate-900 pt-6 text-center text-xs text-slate-500">
-        <p>© 2026 SmartPrice India. Pair programmed with Antigravity AI.</p>
         <p className="mt-1">Disclaimer: All product names, logos, and brands are property of their respective owners. Prices are scraped in real-time or cached from public web pages.</p>
       </footer>
     </div>
