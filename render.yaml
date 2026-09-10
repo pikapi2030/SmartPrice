@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: smartprice-backend
+    env: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    envVars:
+      - key: SELENIUM_HEADLESS
+        value: "True"
+      - key: MOCK_FALLBACK
+        value: "True"
+      - key: MATCHING_THRESHOLD
+        value: "60.0"
+      - key: CACHE_EXPIRY_SECONDS
+        value: "3600"
