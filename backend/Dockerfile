@@ -23,12 +23,12 @@ ENV PYTHONPATH=/app
 # Set working directory inside container
 WORKDIR /app
 
-# Copy requirements and install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy requirements and install dependencies (supports building from root or backend directory)
+COPY backend/requirements.txt ./backend/requirements.txt
+RUN pip install --no-cache-dir -r ./backend/requirements.txt
 
-# Copy backend source code into a subfolder 'backend' so that Python module imports resolve properly
-COPY . ./backend
+# Copy backend source files
+COPY backend/ ./backend/
 
 # Expose FastAPI port
 EXPOSE 8000
