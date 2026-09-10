@@ -45,19 +45,19 @@ const generateDemoResults = (query) => {
           title: `${modelName} - Official Amazon Listing`,
           price: amazonPrice,
           rating: 4.6,
-          url: `https://www.amazon.in/s?k=${encodeURIComponent(query)}`,
+          url: `https://www.amazon.in/s?k=${encodeURIComponent(modelName)}`,
           image: "https://images-eu.ssl-images-amazon.com/images/I/71v2jvh6nHL._AC_UL320_.jpg",
           platform: "Amazon",
-          variants: [{ color: "Black", price: amazonPrice, rating: 4.6, url: "#", image: "", title: modelName }]
+          variants: [{ color: "Black", price: amazonPrice, rating: 4.6, url: `https://www.amazon.in/s?k=${encodeURIComponent(modelName)}`, image: "", title: modelName }]
         },
         flipkart_product: {
           title: `${modelName.toUpperCase()} - Flipkart Store`,
           price: flipkartPrice,
           rating: 4.7,
-          url: `https://www.flipkart.com/search?q=${encodeURIComponent(query)}`,
+          url: `https://www.flipkart.com/search?q=${encodeURIComponent(modelName)}`,
           image: "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/d/9/-original-imagtc2qznszgzwv.jpeg",
           platform: "Flipkart",
-          variants: [{ color: "Black", price: flipkartPrice, rating: 4.7, url: "#", image: "", title: modelName }]
+          variants: [{ color: "Black", price: flipkartPrice, rating: 4.7, url: `https://www.flipkart.com/search?q=${encodeURIComponent(modelName)}`, image: "", title: modelName }]
         },
         similarity_score: 98.5
       },
